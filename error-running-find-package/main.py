@@ -5,6 +5,7 @@ A simple script that checks if installing a package can fix the error
 
 Patches
 - 25.9.2025.create - Create the script
+- 27.9.2025.edit - Fix spelling
 """
 
 def main(package):
@@ -13,5 +14,5 @@ def main(package):
         pkgs = f.read().splitlines()
     os.remove("pkgs")
     if package in pkgs:
-        print(package + " was not found, but can be installable with:")
+        print(package + " was not found, but can be installed with:")
         print("     car get " + package)
